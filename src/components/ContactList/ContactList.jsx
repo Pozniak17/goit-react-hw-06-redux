@@ -1,15 +1,16 @@
-import { ContactItem, Button } from "./ContactList.styled";
+import Contact from "../Contact/Contact";
 
 export default function ContactList({ contacts, onDelete }) {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => (
-        <ContactItem key={id}>
-          <p>
-            {name}: <span>{number}</span>
-            <Button onClick={() => onDelete(id)}>Delete</Button>
-          </p>
-        </ContactItem>
+        <Contact
+          key={id}
+          name={name}
+          number={number}
+          id={id}
+          onDelete={onDelete}
+        />
       ))}
     </ul>
   );

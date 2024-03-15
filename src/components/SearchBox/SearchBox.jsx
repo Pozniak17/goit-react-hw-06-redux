@@ -1,6 +1,6 @@
-import { FilterLabel, FilterInput } from "./Filter.styled";
+import { FilterLabel, FilterInput } from "./SearchBox.styled";
 
-export default function Filter({ value, onSubmit }) {
+export default function SearchBox({ value, onSubmit }) {
   return (
     <FilterLabel>
       Find contacts by name

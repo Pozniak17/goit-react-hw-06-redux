@@ -5,7 +5,7 @@ import ContactList from "./components/ContactList/ContactList";
 
 import { GlobalStyle } from "./components/GlobalStyle.styled";
 import { Layout } from "./components/Layout.styled";
-import Filter from "./components/Filter/Filter";
+import Filter from "./components/SearchBox/SearchBox";
 
 const initialState = [
   { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
