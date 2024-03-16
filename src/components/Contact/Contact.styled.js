@@ -13,6 +13,7 @@ export const ContactItem = styled.li`
 `;
 
 export const Button = styled.button`
+  padding: 5px;
   margin-left: ${(props) => props.theme.spacing(2)}; //10px
   background-color: ${(props) => props.theme.colors.white};
   border-radius: ${(props) => props.theme.radii.middle}; //8px

@@ -1,4 +1,7 @@
+import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { addContacts } from "../../redux/actions.js";
+
 import {
   FormContainer,
   FormLabel,
@@ -6,10 +9,11 @@ import {
   Button,
 } from "./ContactForm.styled";
 
-export default function ContactForm({ onSubmit }) {
+export default function ContactForm() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
+  const dispatch = useDispatch();
   // обробник подій за атрибутом name✅
   // якщо значення поля співпадає, записуємо значення в name/number
   const handleChange = (event) => {
@@ -25,7 +29,7 @@ export default function ContactForm({ onSubmit }) {
   const handleSumbit = (event) => {
     event.preventDefault();
     // передаємо через проп onSumit => App
-    onSubmit(name, number);
+    dispatch(addContacts(name, number));
 
     reset();
   };
